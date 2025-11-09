@@ -4,37 +4,48 @@ import viteLogo from "/vite.svg"
 import "./App.css"
 
 function Item({ name }) {
-  return <div>{name}</div>
+  return (
+    <div className="item">
+      {name}
+    </div>
+  )
 }
 
 function App() {
   const [count, setCount] = useState(0)
 
-  var c = 0
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <Item name="Sample Item" />
-      <Item name="Sample Item 2" />
-      <Item name="Sample Item 3" />
+      <header className="header">
+        <div className="logos">
+          <a href="https://vite.dev" target="_blank">
+            <img src={viteLogo} className="logo" alt="Vite logo" />
+          </a>
+          <a href="https://react.dev" target="_blank">
+            <img src={reactLogo} className="logo react" alt="React logo" />
+          </a>
+        </div>
+        <h1>Vite + React</h1>
+        <h2 className="subtitle">Welcome to My Custom React App</h2>
+      </header>
+
+      <section className="items-section">
+        <Item name="Sample Item 1" />
+        <Item name="Sample Item 2" />
+        <Item name="Sample Item 3" />
+      </section>
+
       <div className="card">
         {count % 2 === 0 ? <p>Even Count</p> : <p>Odd Count</p>}
-        <button onClick={() => setCount(count + 1)}>count is {count}</button>
+        <button onClick={() => setCount(count + 1)}>Count is {count}</button>
         <p>
           Edit <code>src/App.jsx</code> and save to test HMR
         </p>
       </div>
-      <p className="read-the-docs">
+
+      <footer className="footer">
         Click on the Vite and React logos to learn more
-      </p>
+      </footer>
     </>
   )
 }
