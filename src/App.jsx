@@ -25,7 +25,7 @@ function App() {
             <img src={reactLogo} className="logo react" alt="React logo" />
           </a>
         </div>
-        <h1>Vite + React</h1>
+        <h1 id="VR">Vite + React</h1>
         <h2 className="subtitle">Welcome to My Custom React App</h2>
       </header>
 
@@ -33,6 +33,7 @@ function App() {
         <Item name="Sample Item 1" />
         <Item name="Sample Item 2" />
         <Item name="Sample Item 3" />
+        <Item name="Sample Item 4" />
       </section>
 
       <div className="card">
